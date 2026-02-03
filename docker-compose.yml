@@ -1,0 +1,113 @@
+services:
+  # =========================
+  # DATABASE
+  # =========================
+  postgres:
+    image: postgres:15
+    container_name: bank-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: alumno
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: bankdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - banknet
+
+  # =========================
+  # PGADMIN
+  # =========================
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: bank-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8088:80"
+    depends_on:
+      - postgres
+    networks:
+      - banknet
+
+  # =========================
+  # PERSONS SERVICE
+  # =========================
+  persons:
+    build:
+      context: .
+      dockerfile: Persons/WebApi/Dockerfile
+    command: >
+      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
+    container_name: persons-api
+    environment:
+      ASPNETCORE_URLS: http://+:5300
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=bankdb;Username=alumno;Password=123456
+    ports:
+      - 5300:5300
+    depends_on:
+      - postgres
+    networks:
+      - banknet
+
+  # =========================
+  # ACCOUNTS SERVICE
+  # =========================
+  accounts:
+    build:
+      context: .
+      dockerfile: Accounts/WebApi/Dockerfile
+    command: >
+      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
+    container_name: accounts-api
+    environment:
+      ASPNETCORE_URLS: http://+:5200
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=bankdb;Username=alumno;Password=123456
+    ports:
+      - 5200:5200
+    depends_on:
+      - postgres
+      - persons
+    networks:
+      - banknet
+
+  # =========================
+  # MOVEMENTS SERVICE
+  # =========================
+  movements:
+    build:
+      context: .
+      dockerfile: Movements/WebApi/Dockerfile
+    command: >
+      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
+    container_name: movements-api
+    environment:
+      ASPNETCORE_URLS: http://+:5400
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=bankdb;Username=alumno;Password=123456
+    ports:
+      - "5400:5400"
+    depends_on:
+      - postgres
+      - accounts
+    networks:
+      - banknet
+
+# =========================
+# VOLUMES
+# =========================
+volumes:
+  postgres_data:
+
+# =========================
+# NETWORK
+# =========================
+networks:
+  banknet:

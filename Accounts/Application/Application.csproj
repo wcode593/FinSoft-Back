@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\SharedContracts\SharedContracts.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Accounts\Commands\" />
+      <Folder Include="Accounts\Queries\" />
+      <Folder Include="Accounts\QueryHandler\" />
+      <Folder Include="Commons\" />
+      <Folder Include="Commons\Helpers\" />
+      <Folder Include="IRepositories\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="14.0.0" />
+      <PackageReference Include="polly" Version="8.6.5" />
+      <PackageReference Include="restSharp" Version="113.1.0" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+CREATE DATABASE finsoft;
+\c finsoft
+
+-- Crear schemas
+CREATE SCHEMA IF NOT EXISTS persons;
+CREATE SCHEMA IF NOT EXISTS clients;
+CREATE SCHEMA IF NOT EXISTS account_db;
+CREATE SCHEMA IF NOT EXISTS movements;

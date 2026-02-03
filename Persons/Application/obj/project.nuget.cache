@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sBtQ4LXK6tg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Persons\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Miguel\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
