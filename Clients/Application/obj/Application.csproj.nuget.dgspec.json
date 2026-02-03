@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj": {}
+    "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj": {
+    "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\_projects\\finsoft\\Clients\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config"

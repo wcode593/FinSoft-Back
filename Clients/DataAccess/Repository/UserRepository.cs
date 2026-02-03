@@ -1,8 +1,9 @@
 using System;
+using Application.IRepository;
 
 namespace DataAccess.Repository;
 
-public class UserRepository
+public class UserRepository : IUserRepository
 
 {
 
