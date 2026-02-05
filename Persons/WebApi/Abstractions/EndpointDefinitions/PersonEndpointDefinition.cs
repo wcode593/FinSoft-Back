@@ -9,16 +9,16 @@ public class PersonEndpointDefinition : IEndpointDefinition
 {
     public void RegisterEndpoints(WebApplication app)
     {
-        var url_base = "/api/person";
+        var url_base = "/";
         var posts = app.MapGroup(url_base);
 
-        posts.MapGet("/", GetAllPerson);
+        posts.MapGet("", GetAllPerson);
         posts.MapGet("by-id/{id}", GetPersonById).WithName("GetPersonById");
         posts.MapPost("get-create", GetOrCreatePerson).WithName("GetOrCreatePerson");
         posts.MapGet("by-identification/{identification}", GetPersonByIdentification).WithName("GetPersonByIdentification");
-        posts.MapPost("/", CreatePerson);
-        posts.MapPut("/{id}", UpadatePerson);
-        posts.MapDelete("/{id}", RemovePerson);
+        posts.MapPost("", CreatePerson);
+        posts.MapPut("{id}", UpadatePerson);
+        posts.MapDelete("{id}", RemovePerson);
     }
 
     private static async Task<IResult> GetOrCreatePerson(IMediator mediator, Person person)

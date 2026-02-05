@@ -15,3 +15,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Application\obj\Debug\net8.
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Application\obj\Debug\net8.0\ref\Application.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Application\bin\Debug\net8.0\SharedContracts.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Application\bin\Debug\net8.0\SharedContracts.pdb
+C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Application\obj\Debug\net8.0\Application.sourcelink.json

@@ -8,12 +8,12 @@
       "dockerBuild": {
         "tag": "finsoft:dev",
         "target": "base",
-        "dockerfile": "${workspaceFolder}/Persons/WebApi/Dockerfile",
+        "dockerfile": "${workspaceFolder}/Clients/WebApi/Dockerfile",
         "context": "${workspaceFolder}",
         "pull": true
       },
       "netCore": {
-        "appProject": "${workspaceFolder}/Persons/WebApi/WebApi.csproj"
+        "appProject": "${workspaceFolder}/Clients/WebApi/WebApi.csproj"
       }
     },
     {
@@ -22,7 +22,7 @@
       "dependsOn": ["build"],
       "dockerBuild": {
         "tag": "finsoft:latest",
-        "dockerfile": "${workspaceFolder}/Persons/WebApi/Dockerfile",
+        "dockerfile": "${workspaceFolder}/Clients/WebApi/Dockerfile",
         "context": "${workspaceFolder}",
         "platform": {
           "os": "linux",
@@ -31,7 +31,7 @@
         "pull": true
       },
       "netCore": {
-        "appProject": "${workspaceFolder}/Persons/WebApi/WebApi.csproj"
+        "appProject": "${workspaceFolder}/Clients/WebApi/WebApi.csproj"
       }
     },
     {
@@ -40,7 +40,7 @@
       "dependsOn": ["docker-build: debug"],
       "dockerRun": {},
       "netCore": {
-        "appProject": "${workspaceFolder}/Persons/WebApi/WebApi.csproj",
+        "appProject": "${workspaceFolder}/Clients/WebApi/WebApi.csproj",
         "enableDebugging": true
       }
     },
@@ -50,7 +50,7 @@
       "dependsOn": ["docker-build: release"],
       "dockerRun": {},
       "netCore": {
-        "appProject": "${workspaceFolder}/Persons/WebApi/WebApi.csproj"
+        "appProject": "${workspaceFolder}/Clients/WebApi/WebApi.csproj"
       }
     }
   ]

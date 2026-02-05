@@ -8,13 +8,11 @@ public class AccountEndpointDefinition : IEndpointDefinition
 {
     public void RegisterEndpoints(WebApplication app)
     {
-        var url_base = "/api/movements";
+        var url_base = "/";
         var group = app.MapGroup(url_base);
 
-        group.MapGet("/{accountNumber}/{fechaInicio}/{fechaFin}", GetMovementsByDate)
-        .WithName("GetMovementsByDate");
-        group.MapPost("/", CreateMovement)
-             .WithName("CreateMovement");
+        group.MapGet("{accountNumber}/{fechaInicio}/{fechaFin}", GetMovementsByDate).WithName("GetMovementsByDate");
+        group.MapPost("", CreateMovement).WithName("CreateMovement");
     }
 
     private static async Task<IResult> GetMovementsByDate(

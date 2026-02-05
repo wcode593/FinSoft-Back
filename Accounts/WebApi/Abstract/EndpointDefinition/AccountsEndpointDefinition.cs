@@ -11,15 +11,15 @@ public class AccountEndpointDefinition : IEndpointDefinitionAccount
 {
     public void RegisterAccountEndpoints(WebApplication app)
     {
-        var url_base = "/api/accounts";
+        var url_base = "/";
         var movements = app.MapGroup(url_base);
-        movements.MapGet("/", GetAccounts).WithName("GetAccounts");
-        movements.MapPost("/open", OpenAccount).WithName("OpenAccount");
-        movements.MapPost("/deposit", DepositAccount).WithName("DepositAccount");
-        movements.MapPost("/withdraw", WithdrawAccount).WithName("WithdrawAccount");
-        movements.MapPost("/loan", LoanAccount).WithName("LoanAccount");
-        movements.MapPost("/transfer", TransferAccount).WithName("TransferAccount");
-        movements.MapGet("/{accountIdOrNumber}", GetAccountByIdOrNumber).WithName("GetAccountByIdOrNumber");
+        movements.MapGet("", GetAccounts).WithName("GetAccounts");
+        movements.MapPost("open", OpenAccount).WithName("OpenAccount");
+        movements.MapPost("deposit", DepositAccount).WithName("DepositAccount");
+        movements.MapPost("withdraw", WithdrawAccount).WithName("WithdrawAccount");
+        movements.MapPost("loan", LoanAccount).WithName("LoanAccount");
+        movements.MapPost("transfer", TransferAccount).WithName("TransferAccount");
+        movements.MapGet("{accountIdOrNumber}", GetAccountByIdOrNumber).WithName("GetAccountByIdOrNumber");
     }
 
     private static async Task<IResult> GetAccounts(IMediator mediator)

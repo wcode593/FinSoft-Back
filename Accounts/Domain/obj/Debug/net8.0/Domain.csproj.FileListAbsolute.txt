@@ -10,3 +10,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Domain\obj\Debug\net8.0\ref
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Domain\obj\Debug\net8.0\ref\Domain.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+C:\Users\Miguel\Documents\_projects\finsoft\Accounts\Domain\obj\Debug\net8.0\Domain.sourcelink.json

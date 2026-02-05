@@ -138,3 +138,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Accounts\WebApi\bin\Debug\net8.0\Rab
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\WebApi\bin\Debug\net8.0\SharedContracts.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\WebApi\bin\Debug\net8.0\SharedContracts.pdb
+C:\Users\Miguel\Documents\_projects\finsoft\Accounts\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

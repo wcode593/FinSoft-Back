@@ -1,4 +1,3 @@
-using System;
 using Application.Accounts.Commands;
 using Application.IRepositories;
 using Domain.Models;
@@ -15,5 +14,4 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Account>
     {
         return await _repo.DepositAsync(request.AccountIdOrNumber, request.Amount);
     }
-
 }

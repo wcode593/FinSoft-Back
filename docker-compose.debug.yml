@@ -5,11 +5,11 @@ services:
     image: webapi
     build:
       context: .
-      dockerfile: Persons/WebApi/Dockerfile
+      dockerfile: Clients/WebApi/Dockerfile
       args:
         - configuration=Debug
     ports:
-      - 5300:5300
+      - 5600:5600
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:

@@ -136,3 +136,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Movements\WebApi\obj\Debug\net8.0\re
 C:\Users\Miguel\Documents\_projects\finsoft\Movements\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\Miguel\Documents\_projects\finsoft\Movements\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\Miguel\Documents\_projects\finsoft\Movements\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\Miguel\Documents\_projects\finsoft\Movements\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

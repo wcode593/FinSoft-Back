@@ -42,8 +42,6 @@ services:
     build:
       context: .
       dockerfile: Persons/WebApi/Dockerfile
-    command: >
-      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
     container_name: persons-api
     environment:
       ASPNETCORE_URLS: http://+:5300
@@ -63,8 +61,6 @@ services:
     build:
       context: .
       dockerfile: Accounts/WebApi/Dockerfile
-    command: >
-      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
     container_name: accounts-api
     environment:
       ASPNETCORE_URLS: http://+:5200
@@ -85,8 +81,6 @@ services:
     build:
       context: .
       dockerfile: Movements/WebApi/Dockerfile
-    command: >
-      bash -c "dotnet ef migrations add ModifyMovementsAccountDb --startup-project ./WebApi/WebApi.csproj && dotnet ef database update --startup-project ./WebApi/WebApi.csproj && dotnet WebApi.dll"
     container_name: movements-api
     environment:
       ASPNETCORE_URLS: http://+:5400
@@ -99,7 +93,28 @@ services:
       - accounts
     networks:
       - banknet
-
+  # =========================
+  # MOVEMENTS SERVICE
+  # =========================
+  clients:
+    build:
+      context: .
+      dockerfile: Clients/WebApi/Dockerfile
+    container_name: clients-api
+    environment:
+      ASPNETCORE_URLS: http://+:5600
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=bankdb;Username=alumno;Password=123456
+      SeedAdminUser: "true"
+      SeedAdminEmail: "admin@bank.com"
+      SeedAdminPassword: "Admin123+"
+    ports:
+      - "5600:5600"
+    depends_on:
+      - postgres
+      - persons
+    networks:
+      - banknet
 # =========================
 # VOLUMES
 # =========================

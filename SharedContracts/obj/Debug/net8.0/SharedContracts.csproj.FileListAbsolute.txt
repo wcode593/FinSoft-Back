@@ -6,6 +6,7 @@ C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\Sha
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfoInputs.cache
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfo.cs
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.sourcelink.json
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.dll
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\refint\SharedContracts.dll
 C:\Users\Miguel\Documents\_projects\finsoft\SharedContracts\obj\Debug\net8.0\SharedContracts.pdb

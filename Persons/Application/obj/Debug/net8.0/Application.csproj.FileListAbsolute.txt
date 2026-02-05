@@ -13,3 +13,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Persons\Application\obj\Debug\net8.0
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\Miguel\Documents\_projects\finsoft\Persons\Application\obj\Debug\net8.0\Application.sourcelink.json

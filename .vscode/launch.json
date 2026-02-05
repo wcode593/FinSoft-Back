@@ -6,7 +6,7 @@
       "request": "launch",
       "preLaunchTask": "docker-run: debug",
       "netCore": {
-        "appProject": "${workspaceFolder}/Persons/WebApi/WebApi.csproj"
+        "appProject": "${workspaceFolder}/Clients/WebApi/WebApi.csproj"
       }
     }
   ]

@@ -125,3 +125,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Persons\WebApi\obj\Debug\net8.0\ref\
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\WebApi\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\WebApi\bin\Debug\net8.0\Npgsql.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Persons\WebApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Miguel\Documents\_projects\finsoft\Persons\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

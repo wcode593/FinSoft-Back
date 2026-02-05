@@ -19,3 +19,4 @@ C:\Users\Miguel\Documents\_projects\finsoft\Accounts\DataAccess\obj\Debug\net8.0
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\DataAccess\bin\Debug\net8.0\SharedContracts.dll
 C:\Users\Miguel\Documents\_projects\finsoft\Accounts\DataAccess\bin\Debug\net8.0\SharedContracts.pdb
+C:\Users\Miguel\Documents\_projects\finsoft\Accounts\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
